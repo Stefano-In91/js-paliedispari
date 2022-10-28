@@ -2,7 +2,7 @@
 
 // Chiedere all’utente di inserire una parola
 
-const userWord = prompt("Inserisci una parola/frase");
+const userWord = prompt("Inserisci una parola/frase").toLowerCase;
 
 // Creare una funzione per capire se la parola inserita è palindroma
 function palindrome(string) {
@@ -22,7 +22,7 @@ function palindrome(string) {
 }
 
 if (palindrome(userWord)) {
-   alert("La parola inserita è palindroma");
+   alert("La parola/frase inserita è palindroma");
 } else {
-   alert("La parola non è palindroma");
+   alert("La parola/frase non è palindroma");
 }
