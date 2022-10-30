@@ -7,7 +7,7 @@ const userWord = prompt("Inserisci una parola/frase").toLowerCase();
 function palindrome(string) {
    let equalLetterCounter = 0;
    for (let i = 0; i < string.length; i++) {
-      // Comparazione prima lettera con ultima e via scalando
+      // Comparazione prima lettera con ultima, seconda con penultima e via scalando
       console.log(string[i], string[string.length - 1 - i])
       if (string[i] === string[string.length - 1 - i]){
          // Incremento contatore per ogni lettera uguale a quella nella stessa posizione a partire dal fondo
