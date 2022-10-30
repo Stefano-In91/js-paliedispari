@@ -4,7 +4,7 @@
 let userChoice;
 do {
    userChoice = prompt("Pari o Dispari?").toLowerCase();
-} while ( userChoice != "pari" && userChoice != "dispari" )
+} while ( userChoice !== "pari" && userChoice !== "dispari" )
 
 let userNumber;
 do {
