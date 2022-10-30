@@ -1,28 +1,26 @@
 "use strict";
 
 // Chiedere all’utente di inserire una parola
-
-const userWord = prompt("Inserisci una parola/frase").toLowerCase;
+const userWord = prompt("Inserisci una parola/frase").toLowerCase();
 
 // Creare una funzione per capire se la parola inserita è palindroma
 function palindrome(string) {
-   let wordCounter = 0;
+   let equalLetterCounter = 0;
    for (let i = 0; i < string.length; i++) {
+      // Comparazione prima lettera con ultima e via scalando
       console.log(string[i], string[string.length - 1 - i])
       if (string[i] === string[string.length - 1 - i]){
-         wordCounter++;
-         console.log(wordCounter);
+         // Incremento contatore per ogni lettera uguale a quella nella stessa posizione a partire dal fondo
+         equalLetterCounter++;
+         console.log(equalLetterCounter);
       }
    }
-   if (wordCounter === string.length){
-      return true;
-   } else {
-      return false;
-   }
+   // Restituisco risultato Booleano su eguaglianza
+   return equalLetterCounter === string.length;
 }
-
+// Risultato comparazione
 if (palindrome(userWord)) {
-   alert("La parola/frase inserita è palindroma");
+   alert("La parola/frase è palindroma");
 } else {
    alert("La parola/frase non è palindroma");
 }
