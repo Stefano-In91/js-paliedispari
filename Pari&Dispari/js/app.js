@@ -9,7 +9,7 @@ do {
 let userNumber;
 do {
    userNumber = Number(prompt("Scegli un numero da 1 a 5"));
-} while ( userNumber > 5 || userNumber == 0 )
+} while ( userNumber <= 0 || userNumber > 5 )
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 function getRandomIntInclusive(min, max) {
@@ -22,15 +22,11 @@ const pcNumber = getRandomIntInclusive(1, 5);
 const sum = userNumber + pcNumber;
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 function isEven(number) {
-   if (number % 2 == 0){
-      return true;
-   } else {
-      return false;
-   }
+   return number % 2 === 0;
 }
 // Dichiariamo chi ha vinto.
-if ( (userChoice == "pari" && isEven(sum)) || (userChoice == "dispari" && !isEven(sum)) ) {
-   alert(`La somma del tuo numero e quello del pc è ${sum}, avendo scelto ${userChoice} hai vinto`);
+if ( (userChoice === "pari" && isEven(sum)) || (userChoice === "dispari" && !isEven(sum)) ) {
+   alert(`La somma del tuo numero e quello del pc è ${sum}, avendo scelto ${userChoice}, hai Vinto`);
 } else {
-   alert(`La somma del tuo numero e quello del pc è ${sum}, avendo scelto ${userChoice} hai perso`);
+   alert(`La somma del tuo numero e quello del pc è ${sum}, avendo scelto ${userChoice}, hai Perso`);
 }
